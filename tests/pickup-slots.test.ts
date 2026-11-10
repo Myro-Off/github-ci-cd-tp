@@ -13,8 +13,6 @@ describe("RG-06 : les créneaux proposés", () => {
   });
 });
 
-// TODO TP 2 : les cas limites de RG-06 ne sont pas testés (voyez la couverture : npm run test:coverage).
-// Retirez « .skip », puis remplacez chaque undefined par la valeur attendue d'après RG-06.
 describe("RG-06 : jours d'ouverture", () => {
   it("le mardi 20 est ouvert", () => {
     expect(isOpenDay(new Date(2026, 9, 20))).toBe(true);
