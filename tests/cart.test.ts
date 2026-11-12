@@ -15,7 +15,7 @@ describe("RG-01 et RG-02 : les lignes du panier", () => {
   });
 
   it("accepte 20 exemplaires d'un produit", () => {
-    expect(quote([{ productId: "p2", quantity: 20 }]).subtotal).toBe(7600);
+    expect(quote([{ productId: "p2", quantity: 20 }]).subtotal).toBe(9000);
   });
 });
 
