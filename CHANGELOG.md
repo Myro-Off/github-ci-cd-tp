@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Myro-Off/github-ci-cd-tp/compare/v1.0.0...v1.1.0) (2026-11-12)
+
+
+### Features
+
+* **catalog:** increase apple price to 4.50 ([61fa55d](https://github.com/Myro-Off/github-ci-cd-tp/commit/61fa55de89f5ab043888863f3c82fc78801748fa))
+
 ## 1.0.0 (2026-11-12)
 
 
