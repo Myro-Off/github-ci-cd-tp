@@ -4,6 +4,7 @@ name: circuitcourt-production
 
 services:
   circuitcourt:
+    platform: linux/amd64
     # TODO TP 4 : votre image. Remplacez OWNER par votre identifiant GitHub (en minuscules),
     # et sha-XXXXXXX par le tag à déployer (page du dépôt > Packages > circuitcourt).
     image: ghcr.io/myro-off/circuitcourt:sha-a7c1d66
