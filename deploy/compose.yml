@@ -7,7 +7,7 @@ services:
     platform: linux/amd64
     # TODO TP 4 : votre image. Remplacez OWNER par votre identifiant GitHub (en minuscules),
     # et sha-XXXXXXX par le tag à déployer (page du dépôt > Packages > circuitcourt).
-    image: ghcr.io/myro-off/circuitcourt:sha-a7c1d66
+    image: ghcr.io/myro-off/circuitcourt:sha-4e9fceb
     ports:
       - "8088:3000" # l'application en production : http://localhost:8088
     environment:
