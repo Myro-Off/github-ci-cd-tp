@@ -3,8 +3,8 @@ const euros = (cents) => `${(cents / 100).toFixed(2).replace(".", ",")} €`;
 
 async function loadProducts() {
   const products = await (await fetch("/api/products")).json();
-  // lodash, pour trier les produits par producteur
-  const sorted = _.sortBy(products, ["producer", "name"]);
+  // Tri natif des produits par producteur puis par nom (sans lodash)
+  const sorted = [...products].sort((a, b) => a.producer.localeCompare(b.producer) || a.name.localeCompare(b.name));
   const grid = document.getElementById("products");
   grid.innerHTML = "";
   for (const p of sorted) {

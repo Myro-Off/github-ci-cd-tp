@@ -1,4 +1,3 @@
-import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express, { type NextFunction, type Request, type Response } from "express";
@@ -10,7 +9,6 @@ import { nextSlots } from "./domain/pickup-slots.ts";
 import { sendConfirmation } from "./notification.ts";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const require = createRequire(import.meta.url);
 
 export function createApp() {
   const app = express();
@@ -66,11 +64,8 @@ export function createApp() {
     res.json(order);
   });
 
-  // La page d'accueil utilise lodash, servi directement depuis node_modules
-  app.get("/vendor/lodash.js", (_req, res) => {
-    res.sendFile(require.resolve("lodash/lodash.js"));
-  });
-  app.use(express.static(path.join(root, "public")));
+  // Cache navigateur pour les fichiers statiques (1 jour)
+  app.use(express.static(path.join(root, "public"), { maxAge: "1d" }));
 
   app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
     if (err instanceof InvalidCart || err instanceof InvalidOrder) {
