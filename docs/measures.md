@@ -11,10 +11,10 @@ Relevé du groupe, pour un push sur main. Colonne « Avant » : TP 5. Colonne «
 | Durée totale des jobs (onglet Actions, « Usage ») | 7 min 08 s (428 s) | ~2 min 10 s (130 s) |
 | Énergie estimée par pipeline (durée × 20 W, en Wh) | 2,38 Wh | 0,72 Wh |
 | Carbone par mois, 800 pipelines, 480 g CO₂e/kWh (kg CO₂e) | 0,91 kg CO₂e | 0,28 kg CO₂e |
-| Poids de l'image Docker | 2,33 Go | 248 Mo |
-| Poids de la page d'accueil | 7,8 Mo | ~120 ko |
-| Requêtes de la page | 14 | 14 |
-| EcoIndex (note et lettre) | 48 / 100 (E) | 84 / 100 (A) |
+| Poids de l'image Docker | 2,33 Go | 243 Mo |
+| Poids de la page d'accueil | 7,8 Mo | ~35 ko |
+| Requêtes de la page | 14 | 13 |
+| EcoIndex (note et lettre) | 48 / 100 (E) | 86 / 100 (A) |
 | Artefacts conservés (quoi, combien de jours) | circuitcourt (90 j, 277 Mo), GreenIT (7 j) | Aucun sur le push (GreenIT 7 j hebdo) |
 
 **Notre plus grand gain :**
