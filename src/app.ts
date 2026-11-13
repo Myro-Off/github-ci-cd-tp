@@ -14,7 +14,14 @@ const require = createRequire(import.meta.url);
 
 export function createApp() {
   const app = express();
-  app.use(helmet({ contentSecurityPolicy: { directives: { upgradeInsecureRequests: null } } }));
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: { upgradeInsecureRequests: null },
+        reportOnly: process.env.CSP === "report-only",
+      },
+    }),
+  );
   app.use(express.json());
 
   app.get("/health", (_req, res) => {
